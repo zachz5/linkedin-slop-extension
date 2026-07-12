@@ -20,6 +20,7 @@ const postRegistry = new Map(); // textEl -> { post, text, promoted, labelEl }
 
 const style = document.createElement("style");
 style.textContent = `
+  html { overflow-anchor: none !important; }
   .slop-hidden { display: none !important; overflow-anchor: none !important; }
   .slop-flagged-review { outline: 3px solid #e74c3c !important; outline-offset: -3px; padding-top: 28px !important; overflow-anchor: none !important; }
   .slop-flagged-review [data-testid="expandable-text-box"] {
