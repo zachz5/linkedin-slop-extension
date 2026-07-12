@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: -apple-system, sans-serif; width: 280px; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  label { display: flex; align-items: center; gap: 6px; font-size: 13px; margin: 4px 0; }
+  .row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  input[type="range"] { width: 140px; }
+  #hiddenCount { font-size: 12px; color: #666; margin-bottom: 10px; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+</style>
+</head>
+<body>
+  <h3>LinkedIn Slop Filter</h3>
+  <div id="hiddenCount">Hidden on this page: —</div>
+
+  <div class="row">
+    <span>Threshold: <span id="thresholdValue">2</span></span>
+    <input type="range" id="threshold" min="1" max="7" step="1">
+  </div>
+
+  <label><input type="checkbox" id="reviewMode"> Review mode (show flagged posts, don't hide)</label>
+
+  <hr>
+  <h3>Rules</h3>
+  <label><input type="checkbox" id="rule_emojiBullets"> Emoji bullets</label>
+  <label><input type="checkbox" id="rule_engagementCloser"> Engagement bait closer</label>
+  <label><input type="checkbox" id="rule_emDashes"> Excessive em-dashes</label>
+  <label><input type="checkbox" id="rule_buzzwords"> Corporate buzzwords</label>
+  <label><input type="checkbox" id="rule_hashtagSpam"> Hashtag spam</label>
+  <label><input type="checkbox" id="rule_commandHooks"> Command hooks</label>
+  <label><input type="checkbox" id="rule_questionBookend"> Question bookend</label>
+  <hr>
+  <label><input type="checkbox" id="rule_promotedAlwaysHide"> Always hide promoted posts</label>
+
+  <script src="popup.js"></script>
+</body>
+</html>

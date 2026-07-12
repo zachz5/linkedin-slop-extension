@@ -3,6 +3,10 @@
     "name": "LinkedIn Slop Filter",
     "version": "0.1",
     "description": "Filters AI slop and promotional posts out of the LinkedIn feed.",
+    "permissions": ["storage"],
+    "action": {
+        "default_popup": "popup.html"
+    },
     "icons": {
     "16": "images/linkedinslop16.png",
     "48": "images/linkedinslop48.png",
